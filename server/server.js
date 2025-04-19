@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const pgPool = require('./db');
 
 const app = express();
+app.set('trust proxy', 1); // Trust first proxy for correct rate limiting on Render/Heroku
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
