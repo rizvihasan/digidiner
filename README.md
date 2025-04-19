@@ -75,7 +75,7 @@ I chose MongoDB for menu items because restaurant menus can change a lot—new c
 ## Deployment
 
 - **Backend:** [https://digidiner-backend.onrender.com](https://digidiner-backend.onrender.com)
-- **Frontend:** [Add your Netlify link here once deployed]
+- **Frontend:** [https://digidiner.netlify.app](https://digidiner.netlify.app)
 
 If you deploy your own version, make sure to set the `VITE_API_BASE_URL` in Netlify to your backend's `/api` endpoint, and update CORS in the backend to allow your Netlify domain.
 
