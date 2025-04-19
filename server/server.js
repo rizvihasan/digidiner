@@ -35,7 +35,7 @@ pgPool.query('SELECT NOW()', (err, res) => {
 const corsOptions = {
   origin: [
     'http://localhost:5173',
-    'https://your-netlify-app.netlify.app' // TODO: Replace with your actual Netlify URL after deployment
+    'digidiner.netlify.app'
   ],
   optionsSuccessStatus: 200
 };
