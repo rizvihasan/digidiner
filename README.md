@@ -51,7 +51,7 @@ A full-stack application for browsing a restaurant menu and placing orders. Buil
   - `PG_DATABASE_URL`
   - `PORT` (if required by your platform)
 * After deployment, update the CORS `origin` in `server/server.js` to include your actual Netlify URL.
-* **Backend deployed at:** [Add your backend deployment link here]
+* **Backend deployed at:** https://digidiner-backend.onrender.com
 
 ## Database Justification (MongoDB vs. PostgreSQL)
 
