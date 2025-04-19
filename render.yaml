@@ -1,0 +1,18 @@
+# Render Blueprint for digidiner Backend
+# This file helps Render automatically set up your Node.js backend service.
+
+services:
+  - type: web
+    name: digidiner-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    rootDir: server
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: PG_DATABASE_URL
+        sync: false
+      - key: PORT
+        value: 5001

@@ -32,7 +32,14 @@ pgPool.query('SELECT NOW()', (err, res) => {
 
 // --- Middleware ---
 // Enable Cross-Origin Resource Sharing for frontend requests
-app.use(cors());
+const corsOptions = {
+  origin: [
+    'http://localhost:5173',
+    'https://your-netlify-app.netlify.app' // TODO: Replace with your actual Netlify URL after deployment
+  ],
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 // Parse JSON request bodies
 app.use(express.json());
 // Parse URL-encoded request bodies

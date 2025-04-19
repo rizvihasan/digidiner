@@ -1,4 +1,3 @@
-
 # digidiner - Restaurant Ordering App
 
 A full-stack application for browsing a restaurant menu and placing orders. Built with React, Node.js, Express, MongoDB, and PostgreSQL.
@@ -44,6 +43,16 @@ A full-stack application for browsing a restaurant menu and placing orders. Buil
     ```
     The backend API should now be running, typically on `http://localhost:5001`.
 
+## Backend Deployment (Production)
+
+* Deploy your backend (Node.js/Express) to a platform like Render, Fly.io, or Railway.
+* Set the following environment variables in your deployment platform:
+  - `MONGO_URI`
+  - `PG_DATABASE_URL`
+  - `PORT` (if required by your platform)
+* After deployment, update the CORS `origin` in `server/server.js` to include your actual Netlify URL.
+* **Backend deployed at:** [Add your backend deployment link here]
+
 ## Database Justification (MongoDB vs. PostgreSQL)
 
 This project utilizes a hybrid database approach to leverage the strengths of both MongoDB and PostgreSQL:
@@ -59,6 +68,7 @@ This project utilizes a hybrid database approach to leverage the strengths of bo
 ## API Endpoints (Node.js Backend)
 
 *   `GET /api/menu`: Fetches all menu items.
+*   `GET /api/menu/:id`: Fetches a single menu item by ID.
 *   `POST /api/orders`: Creates a new order. Expects customer details and items in the request body.
 *   `GET /api/orders/lookup?phone=<phone_number>`: Fetches orders associated with a specific phone number.
 *   `GET /api/orders/lookup?email=<email_address>`: Fetches orders associated with a specific email address.
@@ -86,14 +96,31 @@ This project utilizes a hybrid database approach to leverage the strengths of bo
     ```
     The frontend should be accessible at `http://localhost:5173` (or another port if 5173 is busy).
 
-## Deployment
+## Frontend Deployment (Netlify)
 
-*   **Frontend:** Deployed via Netlify. See link below.
-*   **Backend:** (Add details about your backend deployment platform here - e.g., Render, Fly.io)
-
-**Deployed Frontend Link:** [Add your Netlify link here once deployed]
+* Deploy your frontend to Netlify.
+* In Netlify site settings, set the environment variable:
+  - `VITE_API_BASE_URL` = `https://<your-backend-deployment-url>/api`
+* **Frontend deployed at:** [Add your Netlify link here once deployed]
 
 ## Assumptions & Challenges
 
-*   (Add any assumptions made or challenges faced during development here)
+* The backend and frontend are deployed separately; CORS must be configured to allow the Netlify domain.
+* The backend must be running and accessible for the frontend to function in production.
+* Menu data is seeded using `server/seeder.js`.
+* PostgreSQL schema must be created before running the backend (see `orderRoutes.js` for table structure).
+* (Add any additional assumptions or challenges you faced here)
+
+---
+
+**Checklist Before Deployment:**
+- [x] CORS restricted to Netlify and localhost in `server/server.js`
+- [x] All environment variables documented
+- [x] API endpoints listed
+- [x] README includes deployment instructions and links
+- [x] All code committed and pushed to GitHub
+
+---
+
+**After deployment, test the full flow (menu, cart, order, order history) on your live URLs!**
 
