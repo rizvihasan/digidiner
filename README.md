@@ -1,6 +1,6 @@
-# digidiner - Restaurant Ordering App
+# digidiner - Food Ordering App
 
-Welcome to digidiner! This is a full-stack web app I built to help restaurants like "The Digital Diner" offer a smooth online menu and pickup ordering experience. The project uses React (Vite, TypeScript, Tailwind) for the frontend, Node.js/Express for the backend, and leverages both MongoDB and PostgreSQL for data storage.
+Welcome to digidiner! A full-stack web app I built to offer a smooth online menu and pickup ordering experience. The project uses React (Vite, TypeScript, Tailwind) for the frontend, Node.js/Express for the backend, and leverages both MongoDB and PostgreSQL for data storage.
 
 ## Features
 
