@@ -10,6 +10,9 @@ Welcome to digidiner! A full-stack web app I built to offer a smooth online menu
 - Place an order with your name and phone number (no payment required)
 - Get an order confirmation and look up past orders by phone or email
 
+
+## User Journey
+
 ![image](https://github.com/user-attachments/assets/10891003-7c3b-4bd6-9982-fd16c082a79d)           
 ![image](https://github.com/user-attachments/assets/33665e13-04e6-4092-91c1-cc415fe3166b)
 ![Screenshot 2025-04-20 003414](https://github.com/user-attachments/assets/982ffa65-216d-4970-9a0b-d95e2ce3ffae)
