@@ -28,10 +28,11 @@ pgPool.query('SELECT NOW()', (err, res) => {
   } else {
     console.log('PostgreSQL Connected:', res.rows[0].now);
   }
-});
+}); 
 
 // --- Middleware ---
 // Enable Cross-Origin Resource Sharing for frontend requests
+
 const corsOptions = {
   origin: [
     'http://localhost:5173',
