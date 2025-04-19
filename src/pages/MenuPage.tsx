@@ -4,6 +4,9 @@ import { HeroSection } from '@/components/menu/HeroSection';
 import { Skeleton } from '@/components/ui/skeleton';
 import { MenuItem } from '@/types'; // Import the standardized type
 
+// Use environment variable for the API base URL
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001/api'; 
+
 export const MenuPage: React.FC = () => {
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]); 
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -14,7 +17,8 @@ export const MenuPage: React.FC = () => {
       setIsLoading(true);
       setError(null);
       try {
-        const response = await fetch('http://localhost:5001/api/menu'); 
+        // Use the API_BASE_URL variable
+        const response = await fetch(`${API_BASE_URL}/menu`); 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
