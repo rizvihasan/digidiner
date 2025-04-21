@@ -29,12 +29,12 @@ export const HeroSection: React.FC = () => {
             size="lg" 
             variant="outline" 
             className="border-restaurant-primary text-restaurant-primary hover:bg-restaurant-primary/10"
-            onClick={() => {
-              window.location.href = '/orders';
-            }}
+            asChild
           >
-            <ShoppingBag className="mr-2 h-4 w-4" />
-            Track Order
+            <a href="/orders">
+              <ShoppingBag className="mr-2 h-4 w-4" />
+              Track Order
+            </a>
           </Button>
         </div>
       </div>
